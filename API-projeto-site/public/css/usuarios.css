@@ -1,0 +1,224 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #1f1f21;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.destaque1{
+    color: #309e7e;
+}
+
+
+
+
+.header{
+    background-color: #1f1f21;
+    color: white;
+    overflow: auto;
+    padding: 20px;
+    border-bottom: solid 1px white;
+}
+.header img{
+    height: 60px;
+    margin: 0;
+    
+}
+.header button{
+    border: solid 1px #309e7e;
+    background-color: #309e7e;
+    color: white;
+    text-transform: uppercase;
+    float: right;
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 14px;
+}
+
+.header p{
+    margin: 0;
+    float: left;
+    margin-top: 25px;
+}
+
+
+
+.banner{
+    text-align: center;
+    background-color: #232323;
+    background-image: url(../img/modelos/modelo\ comunidade.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 583px;  
+}
+.banner .box{
+    padding: 90px;
+    position: absolute;
+    /* line-height:100px; */
+    justify-content: center;
+    margin-left: 21%;
+    margin-top: 100px;  
+}
+.banner p{
+    color: white;
+    margin: 0;
+    font-family: tahoma;
+    text-transform: uppercase;
+    font-size: 70px;
+    letter-spacing: 3px;
+}
+.banner .box img{
+    height: 30px;
+    float: right;
+    margin-right: 10px;
+}
+.banner .plusultra{
+    color: white;
+    margin: 0;
+    font-family: tahoma;
+    text-transform: uppercase;
+    font-size: 30px;
+    float: right;
+}
+
+
+.barra1 {
+    background-color: #1f1f21;
+    overflow: auto;
+}
+
+.barra1 .box{
+    float: left;
+    padding: 3%;
+    width: 27%;
+}
+.barra1 .texto{
+    margin: 0;
+    color: white;
+    font-size: 15px;
+    text-align: justify;
+}
+.barra1 .titulo{
+    margin: 0;
+    text-transform: uppercase;
+    color: #309e7e;
+    font-family: Tahoma;
+    font-size: 30px;
+    text-align: center;
+}
+.barra1 .box img{
+    width: 100px;
+    margin-top: 23px;
+    cursor: pointer;
+
+}
+
+.barra1 .box .pontos{
+    margin-top: 40px;
+    color: white;
+    font-family: Tahoma;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+
+
+.enquete{
+    margin: auto;
+    background-color: #1f1f21;
+}
+
+.enquete h2{
+    font-size: 30px;
+    color: #309e7e;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: tahoma;
+    margin-top: 60px;
+}
+
+.grafico1 {
+    margin-top: 20px;
+    width: 45%;
+    background-color:#39393a;
+    border-radius: 5%;
+    float: left;
+    
+}
+.grafico2 {
+    margin-top: 20px;
+    width: 45%;
+    background-color:#39393a;
+    border-radius: 5%;
+    float: right;
+    
+}
+
+.grafico1 img{
+    height: 150px;
+    padding: 2.5%;
+    /* margin-bottom: 10%; */
+    margin-top: 4%;
+    
+}
+
+
+.grafico1 p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #309e7e;
+    font-family: Tahoma;
+    margin-top: 5%;
+}
+
+
+
+.quiz{
+    text-align: center;
+    background-color: #1f1f21;
+}
+
+.quiz .perguntas{
+    margin-bottom: 20px;
+    
+}
+
+.quiz button{
+    border: solid 1px #309e7e;
+    background-color: #309e7e;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 14px;
+}
+
+.quiz h2{
+    color: #309e7e;
+    margin:0;
+    padding: 40px;
+    font-size:30px ;
+    text-transform: uppercase;
+    font-family: tahoma;
+}
+
+.quiz .perguntas{
+    color: white;
+    margin-bottom: 40px;
+}
+
+.quiz img{
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+

@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    background-color: #252323;
+    border-bottom: 3px solid #f96300;
+}
+
+.container { 
+    width: 80%;
+    margin: auto;
+}
+
+.container img{
+    width: 250px;
+}
+
+#div_relogio{
+    float: right;
+    padding-top: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(37, 37, 37);
+    color: rgb(255 31 0);
+}
+
+#div_relogio{
+    float: right;
+    padding-top: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(37, 37, 37);
+    color: rgb(255 31 0);
+}
+
+.menu{
+    background-color: rgb(218, 218, 218);
+    padding-top: 80px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 10px 0 10px;
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin: 20px 6% 20px 6%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.navbar a:hover{
+    color: #ff1e00;
+    border-bottom: 1px solid #ff1e00;
+    text-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+.banner {
+    height: 600px;
+    width: 100%;
+    background: url(../img/banner-fundo-porque.png);
+    background-size: cover;
+}
+.banner .container {
+    height: 400px;
+}
+
+.texto h1 {
+    margin-top: 100px;
+    font-size: 60px;
+    color: #f96300;
+    text-shadow: 2px 2px 10px rgb(0, 0, 0);
+    text-align: right;
+    padding-top: 220px;
+    margin: 0;
+}
+
+.box {
+    overflow: auto;
+}
+
+.box-texto{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.box-texto .p_paragrafo{
+    width: 47%;
+    padding: 50px 0 0 3%;
+    float: left;
+    height: 348px;
+    text-align: left;
+    font-family: Helvetica;
+    font-size: 20px;
+}
+
+.box-texto .destaque{
+    font-size: 50px;
+    padding-left: 30px;
+}
+
+.p_paragrafo .bmo-img{
+    float: left;
+    width: 50%;
+    height: 398px;
+    text-align: center;
+}
+
+.paragrafo{
+    padding: 0;
+    padding-left: 3%;
+    text-align: left;
+    font-family: Helvetica;
+    font-size: 20px;
+}
+
+.box-img{
+    width: 60%;
+    margin: auto; 
+}
+
+.copy{
+    background-color: #f96300;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

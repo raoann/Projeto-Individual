@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/joystick-logo.png">
+    <link rel="stylesheet" href="css/categorias.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <title>Categorias</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="index.html">
+                <img src="./img/GameWiki-Extenso.png" alt="logo GamesWiki">
+            </a>
+
+            <div id="div_relogio">
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="container">
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="por-que.html">Porque jogar?</a></li>
+                    <li><a href="https://www.linkedin.com/in/raoann-camara-gon%C3%A7alves-860871213/">Contato</a></li>
+                    <li><a href="login.html">login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="apresentacao">
+            <h2>Conheça mais sobre os generos dos jogos</h2>
+            <button onclick="fps()" class="btn-entrar">FPS</button>
+            <button onclick="battle_royale()" class="btn-entrar">Battle Royale</button>
+            <button onclick="moba()" class="btn-entrar">MOBA</button>
+            <button onclick="rpg()" class="btn-entrar">RPG</button>
+            <button onclick="mmo()" class="btn-entrar">MMO</button>
+            <button onclick="sandbox()" class="btn-entrar">Sandbox</button>
+        </div>
+    </div>
+    <div class="box">
+        <div class="container">
+            <div class="box-item">
+                <h3 id="title">Click em um dos botões</h3>
+                <p id="paragrafo"></p>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="container">
+            <div class="box-item">
+                <div class="grafico">
+                    <canvas id="mychart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy">
+        copyright &COPY;
+    </div>
+</body>
+
+</html>
+<script>
+
+    function fps() {
+        title.innerHTML = `O que é FPS - First Person Shooter?`;
+        paragrafo.innerHTML = `O termo "First Person Shooter", também conhecido apenas por "FPS", 
+        se refere aos jogos de tiro em primeira pessoa. Para que um jogo se caracterize por esse 
+        termo, o jogador deve controlar um personagem e observar o cenário a sua frente como se 
+        estivesse vendo tudo através dos seus olhos.
+        <br>
+        Também é necessário carregar uma arma, que geralmente o personagem carrega com a mão direita, 
+        que é utilizada para acertar os inimigos que vem sua direção. Esses tipos de jogos geralmente
+         envolvem dezenas de encontros com inimigos armados, que devem ser derrotados para dar 
+         continuidade à história.
+        <br>
+        No começo, os primeiros jogos que cunharam esse termo eram em sua maioria extremamente lineares, 
+        em que o jogador deveria andar entre corredores buscando um objeto, voltar, matar mais inimigos, 
+        achar outro objeto, e por aí vai.
+        <br>
+        Com o tempo, jogos de tiro em primeira pessoa combinaram elementos de RPG, dando maior 
+        profundidade aos temas explorados, com pontos de experiência ao derrotar os inimigos 
+        e missões paralelas à narrativa.
+        <br>
+        <br>
+        <br>
+        Exemplos famosos são: <b>Counter-Strike</b>, <b>Call of Duty</b>, <b>Battlefield</b> e <b>Far Cry</>.`;
+    }
+
+    function battle_royale() {
+        title.innerHTML = `Battle Royale`;
+        paragrafo.innerHTML = `Um dos gêneros mais recentes no cenário competitivo, o Battle Royale coloca o jogador ou
+        times de jogadores em uma arena com o objetivo de eliminar inimigos e sobreviver até o final da partida para so 
+        assim, ganharem a partida. 
+        <br>
+        Geralmente, eles contêm três pilares básicos: sobrevivência, exploração e uso de recursos disponíveis no mapa.
+         <br>
+         <br>
+         <br>
+         Exemplo famosos são: <b>PUBG</b>, <b>Fortnite</b>, <b>Free Fire</b> e <b>Apex Legends</b>.`;
+    }
+
+    function moba() {
+        title.innerHTML = `MOBA - Multiplayer Online Battle Arena `;
+        paragrafo.innerHTML = `Considerado o queridinho dos e-sports, os MOBAs permitem que o jogador controle um personagem, 
+        crie um time ou jogue em um e combata inimigos em um mapa ou arena específicos, unindo elementos do RPG e 
+        estratégias em tempo real, nos últimos anos tem sido o gênero de jogo mais jogado dentro do mundo de e-sports.
+        <br>
+        <br>
+        <br>
+        Exemplo famosos são:<b>League of Legends</b>, <b>DOTA</b>, <b>Wild Rift</b> e <b>Arena of Valor</b>.`;
+    }
+
+    function rpg() {
+        title.innerHTML = `RPG - Role-Playing Game`;
+        paragrafo.innerHTML = `Variados do RPG tradicional (jogo com dados e fichas de papel em que os participantes 
+        devem interpretar seus personagens), os eletrônicos estão entre os games mais populares no mundo. Neles, 
+        o jogador controla as ações de um personagem em um universo complexo e bem definido, com o objetivo de 
+        completar uma série de missões para chegar à conclusão do enredo principal. A evolução acontece aos poucos 
+        e de maneira progressiva, eliminando inimigos e realizando quests principais e secundárias para melhoria de
+        habilidades, níveis e equipamentos. Por muito tempo esse gênero foi o mais jogado de toda a historia dos jogos
+        eletronicos.
+        <br>
+        <br>
+        <br>
+        Exemplo famosos são:<b>World of warcraft</b>, <b>Tibia</b>, <b>Dark Souls</b>, <b>Cyperpunk</b>, 
+        <b>Final Fantasy</b>, <b>Ragnarok Online</b> e <b>The Elder Scrolls</b> `;
+    }
+
+    function mmo() {
+        title.innerHTML = `MMO - Massively Multiplayer Online`;
+        paragrafo.innerHTML = `Geralmente com mundos abertos e bastante extensos, com milhões de usuários no mesmo servidor, 
+        esses games permitem a cooperação e interação entre os usuários em larga escala. Apesar de apresentarem um enredo 
+        principal (como os RPGs clássicos), eles trazem um ambiente extremamente vasto, em que é possível assumir diversas 
+        classes, realizar milhares de missões secundárias, destravar masmorras e desafios de combate individuais ou em grupo 
+        e explorar mapas em busca de itens, habilidades ou pontos de experiência. A personalização de personagens costuma 
+        ser abrangente, com inúmeras opções de raças, equipamentos e características que tornam cada jogador único, e os 
+        cenários trazem condições realistas, com dias e noites de chuva, calor ou mesmo tempestades. Também é comum a 
+        criação de guildas – grupos grandes de jogadores que compartilham uma casa dentro do game e se unem para concluir 
+        tarefas e objetivos.
+        <br>
+        <br>
+        <br>
+        Exemplo famosos são:<b>New World</b>, <b>Black Desert</b>, <b>RuneScape</b>, <b>EVE online</b>, <b>LineAge</b>
+        <b>Trove</b> e <b>ArcheAge</b>`;
+    }
+
+    function sandbox() {
+        title.innerHTML = `Sandbox`;
+        paragrafo.innerHTML = `Sandbox é um estilo de game em que são colocadas apenas limitações mínimas para o personagem. 
+        Com isso, o jogador pode vagar e modificar completamente o mundo virtual de acordo com a sua vontade. Ao contrário 
+        dos jogos de progressão, um sandbox enfatiza a exploração e permite selecionar as tarefas que serão realizadas.
+        <br><br>
+        Em vez de inserir áreas segmentadas ou níveis numerados, um game sandbox geralmente ocorre em Mundo Aberto. 
+        Com isso, o jogador possui acesso total do início ao fim. Apesar de elementos estruturados serem incluídos, 
+        como mini-jogos, tarefas e histórias, você pode jogar conforme a sua vontade.
+        <br>
+        <br>
+        Na verdade, a natureza não linear do sandbox cria desafios para os designers, com relação ao enredo. Por conta 
+        disso, tarefas e missões paralelas seguem uma progressão, geralmente são desbloqueadas após a conclusão de outras.
+        <br>
+        <br>
+        <br>
+        Exemplo famosos são: <b>Minecraft</b>, <b>Grand Theft Auto</b>, <b>Roblox</b>, <b>Garry's Mod</b>, <b>Red Dead Redemption</b>, 
+        <b>The Witcher</b>, <b>No Man's Sky</b> e <b>Horizon Zero Dawn</b>`;
+    }
+
+    let random1 = Number((Math.random() * 1000)).toFixed();
+
+    let random2 = Number((Math.random() * 1000)).toFixed();
+
+    let random3 = Number((Math.random() * 1000)).toFixed();
+
+    let random4 = Number((Math.random() * 1000)).toFixed();
+
+    let random5 = Number((Math.random() * 1000)).toFixed();
+
+    let random6 = Number((Math.random() * 1000)).toFixed();
+
+    new Chart(document.getElementById("mychart"), {
+        type: 'pie',
+        data: {
+            labels: ["FPS", "battle_royale", "moba", "rpg", "mmo", "sandbox"],
+            datasets: [{
+                label: "Lucros e Perdas",
+                backgroundColor: ["#8B0000", "#F08080", "#FF4500", "#FF7F50", "#00FFFF", "#708090"],
+                data: [random1, random2, random3, random4, random5, random6]
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Mais jogados - 2020',
+                fontSize: 30,
+            },
+            legend: {
+                display: true,
+                reverse: true,
+                position: 'top'
+            },
+        }
+    });
+
+    function relogio() {
+        let data = new Date();
+        let hor = data.getHours();
+        let min = data.getMinutes();
+        let sec = data.getSeconds();
+
+        if (hor < 10) {
+            hor = "0" + hor;
+        } else if (min < 10) {
+            min = "0" + min;
+        } else if (sec < 10) {
+            sec = "0" + sec;
+        }
+
+        let tempo_total = hor + ":" + min + ":" + sec;
+        let tempo = window.document.getElementById('div_relogio');
+        tempo.innerHTML = tempo_total;
+
+    };
+
+    setInterval(relogio, 500);
+
+</script>

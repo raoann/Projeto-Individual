@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/joystick-logo.png">
+    <link rel="stylesheet" href="css/login.css">
+    <title>login</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="index.html">
+                <img src="./img/GameWiki-Extenso.png" alt="logo GamesWiki">
+            </a>
+
+            <div id="div_relogio">
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="container">
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Categorias</a></li>
+                    <li><a href="por-que.html">Porque jogar?</a></li>
+                    <li><a href="https://www.linkedin.com/in/raoann-camara-gon%C3%A7alves-860871213/">Contato</a></li>
+                    <li><a href="login.html">login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="box">
+            <div class="container">
+                <div class="box-login">
+                    <h1>Login</h1>
+
+                    <form id="form_login" method="post" onsubmit="return entrar()">
+                        <input id="ipt_login" type="text" name="login_html" class="input-padrao"
+                            placeholder="insira o seu login">
+                        <input id="ipt_senha" type="password" name="senha" class="input-padrao"
+                            placeholder="insira a sua senha">
+                        <br>
+                    </form>
+                    <button id="btn_entrar" class="btn-entrar" onclick="entrar()">Entrar</button>
+                    <br>
+                    Não tem registro ?
+                    <br>
+                    <a href="cadastro.html">Registre-se aqui</a>
+                    <br>
+                    <br>
+                    <div class="extra">
+                        <div id="div_erro" class="msg_erro">
+                        </div>
+                        <img src="aguarde-orange.gif" id="img_aguarde" style="display: none;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy">
+        copyright &COPY;
+    </div>
+</body>
+
+</html>
+<script>
+
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.usuario;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+                    sessionStorage.id_usuario_meuapp = json.idUsuario;
+                    window.location.href = 'publicacoes.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.visibility = 'visible';
+        div_erro.style.visibility = 'hidden';
+    }
+
+    function finalizar_aguardar(resposta) {
+        btn_entrar.disabled = false;
+        img_aguarde.style.visibility = 'hidden';
+        div_erro.style.visibility = 'visible';
+        div_erro.innerHTML = resposta;
+    }
+
+    function relogio() {
+        let data = new Date();
+        let hor = data.getHours();
+        let min = data.getMinutes();
+        let sec = data.getSeconds();
+
+        if (hor < 10) {
+            hor = "0" + hor;
+        } else if (min < 10) {
+            min = "0" + min;
+        } else if (sec < 10) {
+            sec = "0" + sec;
+        }
+
+        let tempo_total = hor + ":" + min + ":" + sec;
+        let tempo = window.document.getElementById('div_relogio');
+        tempo.innerHTML = tempo_total;
+
+    };
+
+    setInterval(relogio, 500);
+
+</script>

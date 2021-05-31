@@ -1,0 +1,198 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(218, 218, 218);
+    font-family: Helvetica;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    background-color: #252323;
+    border-bottom: 3px solid #f96300;
+}
+
+.container { 
+    width: 80%;
+    margin: auto;
+}
+
+.container img{
+    width: 250px;
+}
+
+#div_relogio{
+    float: right;
+    padding-top: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(37, 37, 37);
+    color: rgb(255 31 0);
+}
+
+#div_relogio{
+    float: right;
+    padding-top: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(37, 37, 37);
+    color: rgb(255 31 0);
+}
+
+.menu{
+    background-color: rgb(218, 218, 218);
+    padding-top: 80px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 10px 0 10px;
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin: 20px 6% 20px 6%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.navbar a:hover{
+    color: #ff1e00;
+    border-bottom: 1px solid #ff1e00;
+    text-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+.banner {
+    height: 600px;
+    width: 100%;
+    background: url(../img/banner-fundo-big.png);
+    background-size: cover;
+}
+.banner .container {
+    height: 400px;
+}
+
+.texto h1 {
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+    font-size: 55px;
+    color: #f96300;
+    text-shadow: 2px 2px 10px black;
+}
+
+.banner .texto {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.apresentacao{
+        width: 98%;
+        text-align: center;
+        margin: 50px 10px 50px 0;
+        padding-top: 30px;
+        background-color: white;
+        box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.8);
+}
+
+.apresentacao h2{
+    text-align: center;
+    font-family: Helvetica;
+}
+
+.apresentacao h3{
+    width: 98%;
+    text-align: center;
+    margin: 50px 10px 50px 0;
+    padding-top: 30px;
+    background-color: white;
+
+}
+
+.apresentacao .introducao{
+    font-size: 20px;
+    width: 75%;
+    margin: auto;
+}
+
+.explorar {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 10%;
+    margin: auto;
+    text-align: center;
+}
+
+.btn-entrar {
+    color: white;
+    background-color: green;
+    float: none;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 0;
+    padding: 20px 55px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn-entrar:hover{
+    background: rgba(0, 0, 0, 0);
+    color: green;
+    box-shadow: inset 0 0 0 3px;
+}
+
+.jogos-destaque{
+    width: 98%;
+    background-color: white;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+    margin: 200px 0 20px;
+}
+.jogos-destaque h3{
+    padding: 50px 0 50px;
+    text-align: center;
+    font-size: 55px;
+    margin: 0;
+}
+
+.box {
+    overflow: auto;
+    background-color: rgb(218, 218, 218);
+}
+
+.box .box-item {
+    float: left;
+    width: 32%;
+    height: 400px;
+    text-align: center;
+    margin: 50px 10px 50px 0;
+    padding-top: 30px;
+    background-color: white;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.box .box-item img {
+    width: 380px;
+    height: 220px;
+}
+.box .box-item h3{
+    margin: 0;
+}
+.box .box-item p{
+    width: 95%;
+    margin: auto;
+}
+
+.copy{
+    background-color: #f96300;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/joystick-logo.png">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="index.html">
+                <img src="./img/GameWiki-Extenso.png" alt="logo GamesWiki">
+            </a>
+
+            <div id="div_relogio">
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="container">
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="por-que.html">Porque jogar?</a></li>
+                    <li><a href="https://www.linkedin.com/in/raoann-camara-gon%C3%A7alves-860871213/">Contato</a></li>
+                    <li><a href="login.html">login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="box">
+            <div class="container">
+                <div class="box-cadastro">
+                    <h1>Faça aqui seu cadastro!</h1>
+                    <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                        <p>Nome Completo</p>
+                        <input id="ipt_nome" type="text" name="nome" class="input-padrao" autofocus="autofocus"
+                            placeholder="Informe seu nickname" required minlength="4">
+
+                        <input id="ipt_login" type="text" name="login_html" class="input-padrao" placeholder="Informe seu login" required
+                            minlength="4">
+
+                        <input id="ipt_senha" type="password" name="senha" class="input-padrao"
+                            placeholder="insira a sua senha" required minlength="4">
+
+                        <input id="ipt_nascimento" name="data_nasc" class="input-padrao" type="date">
+                    </form>
+
+                    <button onclick="cadastrar()" id="btn_entrar" class="btn-entrar" value="Cadastrar">Cadastrar</button>
+                    
+                    <br>
+                    Ja tem cadastro ?
+                    <br>
+                    <a href="login.html">entre por aqui</a>
+                    <br>
+                    <br>
+                    <img src="aguarde-orange.gif" id="img_aguarde" style="display: none; width:100px">
+
+                    <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+                        Erro no cadastro
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="copy">
+        copyright &COPY;
+        </div>
+    </body>
+
+</html>
+
+<script>
+
+    function cadastrar() {
+            aguardar();
+            var formulario = new URLSearchParams(new FormData(form_cadastro));
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                body: formulario
+            }).then(function (response) {
+
+                if (response.ok) {
+
+                    window.location.href = 'login.html';
+
+                } else {
+
+                    console.log('Erro de cadastro!');
+                    response.text().then(function (resposta) {
+                        div_erro.innerHTML = resposta;
+                    });
+                    finalizar_aguardar();
+                }
+            });
+
+            return false;
+        }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display = 'block';
+        div_erro.style.display = 'none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display = 'none';
+        div_erro.style.display = 'block';
+    }
+
+    function relogio() {
+        let data = new Date();
+        let hor = data.getHours();
+        let min = data.getMinutes();
+        let sec = data.getSeconds();
+
+        if (hor < 10) {
+            hor = "0" + hor;
+        } else if (min < 10) {
+            min = "0" + min;
+        } else if (sec < 10) {
+            sec = "0" + sec;
+        }
+
+        let tempo_total = hor + ":" + min + ":" + sec;
+        let tempo = window.document.getElementById('div_relogio');
+        tempo.innerHTML = tempo_total;
+
+    };
+
+    setInterval(relogio, 500);
+
+
+
+</script>
